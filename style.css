@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    background-color: #3D3B40;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.msg{
+    width: 100%;
+    font-family:cursive;
+    font-weight: bolder;
+    color: #F3F8FF;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    font-size: xx-large;
+    height: 40px;
+    animation: message 2s ease-in-out 2s forwards;
+   
+}
+
+@keyframes message {
+    0%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+    50%{
+        opacity: 0.5;
+        font-size: 10rem;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -230px;
+        font-size: 3rem
+    }
+    
+}
+
+@keyframes y1color {
+    0%{
+        color: white;
+    }
+    100%{
+        color: #00A9FF;
+    }
+}
+
+.y1{
+    color: #fff;
+    animation: y1color 2s ease-in-out 6s forwards;
+   
+}
+@keyframes y2color {
+    0%{
+        color: white;
+    }
+    100%{
+        color: #DC84F3;
+    }
+}
+.y2{
+    color: #fff;
+    animation: y2color 2s ease-in-out 6s forwards;
+}
+@keyframes y3color {
+    0%{
+        color: white;
+    }
+    100%{
+        color:#FFB534;
+    }
+}
+.y3{
+    color: #fff;
+    animation: y3color 2s ease-in-out 6s forwards;
+}
+
+.y4{
+    color: #fff;
+    
+}
+
+.old{
+    
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    animation: old_animation 2s ease-in-out 4.5s forwards;
+    margin-left: -80px;
+    
+   
+}
+
+@keyframes old_animation {
+    0%{
+        top: 0%;
+    }
+    30%{
+        top: -100;
+        color: rgb(0, 255, 13);
+    }
+    100%{
+        top: -300%;
+    }
+    
+}
+.year{
+    position: absolute;
+    top: 380px;
+    width: 100%;
+    text-align: center;
+}
+.year > span{
+    font-size: 175px;
+    font-weight: 700;
+    font-family: "poppins",sans-serif;
+    letter-spacing: -20px;
+}
+
+.first_year{
+    margin-right: 100px;
+}
+
+.new{
+    position: absolute;
+    right:-100px ;
+    animation: new_animation 5s ease-in-out 1.5s forwards;
+}
+
+@keyframes new_animation {
+    0%{
+        right: -100px;
+    }
+   
+    100%{
+        right: 500px;
+        color: #11009E;
+    }
+    
+}
+
+ .balloon{
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(252, 18, 18);
+    position: absolute;
+    top: 50%;
+    left: 80%; 
+}
+.balloon::after{
+    content: '';
+    width: 4px;
+    height: 150px;
+    background-color: #fff;
+    position: absolute;
+    left: 50px;
+    margin-left: -5px;
+    bottom: -150px;
+   
+}
+
+.balloon::before{
+    content: "";
+    width: 4px;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #fd3553 transparent; 
+    position: absolute;
+    left: 35px;
+    bottom: -10px;
+} 
+
+
+.balloon{
+    position: absolute;
+    right:-100px ;
+    animation: balloon_animation 6s ease-in-out 1.5s forwards;
+}
+
+@keyframes balloon_animation  {
+    0%{
+        right:0px;
+    }
+   
+    100%{
+        top: -300px;
+    }
+    
+}
+
+.balloon1{
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(41, 240, 68);
+    position: absolute;
+    top: 80%;
+    left: 13%;
+    
+  
+}
+.balloon1::after{
+    content: '';
+    width: 4px;
+    height: 150px;
+    background-color: #fff;
+    position: absolute;
+    left: 50px;
+    margin-left: -5px;
+    bottom: -150px;
+   
+}
+
+.balloon1::before{
+    content: "";
+    width: 4px;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #66e655 transparent; 
+    position: absolute;
+    left: 35px;
+    bottom: -10px;
+} 
+
+
+.balloon1{
+    position: absolute;
+    right:-100px ;
+    animation: balloon1_animation 6s ease-in-out 1.5s forwards;
+}
+
+@keyframes balloon1_animation  {
+    0%{
+        right: 0px;
+    }
+   
+    100%{
+        top: -300px;
+    }
+    
+}
+
+.firework {
+    position: relative;
+    opacity: 0;
+    animation: show_fireworks 2s ease-in-out 5s forwards;
+}
+@keyframes show_fireworks {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.cracker {
+    position: absolute;
+    width: 4px;
+    height: 80px;
+    transform-origin: 50% 100%;
+    overflow: hidden;
+}
+
+.cracker::before {
+    content: '';
+    background-color: gold;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation: fire 2s ease-in-out infinite;
+}
+
+@keyframes fire {
+    0% {
+        top: 100%;
+    }
+    25% {
+        top: 50%;
+    }
+    50% {
+        top: -25%;
+    }
+    75% {
+        top: -50%;
+    }
+    100% {
+        top: -50%;
+    }
+}
+
+.cracker:nth-child(1) {
+    transform: rotate(0deg) translateY(-15px);
+}
+.cracker:nth-child(2) {
+    transform: rotate(30deg) translateY(-15px);
+}
+.cracker:nth-child(3) {
+    transform: rotate(60deg) translateY(-15px);
+}
+.cracker:nth-child(4) {
+    transform: rotate(90deg) translateY(-15px);
+}
+.cracker:nth-child(5) {
+    transform: rotate(120deg) translateY(-15px);
+}
+.cracker:nth-child(6) {
+    transform: rotate(150deg) translateY(-15px);
+}
+.cracker:nth-child(7) {
+    transform: rotate(180deg) translateY(-15px);
+}
+.cracker:nth-child(8) {
+    transform: rotate(210deg) translateY(-15px);
+}
+.cracker:nth-child(9) {
+    transform: rotate(240deg) translateY(-15px);
+}
+.cracker:nth-child(10) {
+    transform: rotate(270deg) translateY(-15px);
+}
+.cracker:nth-child(11) {
+    transform: rotate(300deg) translateY(-15px);
+}
+.cracker:nth-child(12) {
+    transform: rotate(330deg) translateY(-15px);
+}
+
+#firework1 {
+    left: 25%;
+    top: 50%;
+    transform: scale(1);
+}
+
+#firework2 {
+    left: 50%;
+    top: 75%;
+    transform: scale(0.5);
+}
+
+#firework3 {
+    left: 90%;
+    top: 25%;
+    transform: scale(1.5);
+}
+#firework3 {
+    background-color: #00A9FF;
+    left: 90%;
+    top: 25%;
+    bottom: 25%;
+    transform: scale(1.5);
+}
+
